@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="marvel.css">
+    <script src="marvel.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Marvel</h1>
+            </div>
+          
+            <ul>
+                <li><a href="#" class="a_parent">
+                    <div class="wrap">
+                        <button class="active">Websites</button>
+                    </div>
+                    </a>
+                    <div class="dd_menu">
+                        <ul>
+                            <li>
+                                <a href="https://www.marvel.com/" class="dd_menu_a">
+                                    <div class="wrap">
+                                        <span class="text">
+                                        marvel
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://en.wikipedia.org/wiki/Marvel_Comics" class="dd_menu_a">
+                                    <div class="wrap">
+                                        
+                                        <span class="text">Comics</span>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            
+
+            </div>
+      
+            <div class="banner_image">
+                <div class="banner_content">
+                    <h1>Welcome To The World Of Marvel</h1>      
+                </div>
+            </div>
+      
+   
+<p class="rate-page">Rate The Website: </p>
+<div class="range">
+<input type="range" value="0" min="0" max="4" list="trickmarks" id="myRange">
+<datalist id="trickmarks">
+    <p class="rate">Please Rate The Webpage: </p>
+    <option  label="Bad"></option>
+    <option  label="Not Bad"></option>
+    <option  label="Good"></option>
+    <option  label="Great"></option>
+    <option  label="Excellent"></option>
+</datalist>
+<p><span id="demo"></span></p>
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    var datalist = document.getElementById("trickmarks").options
+    output.innerHTML = slider.value;
+    slider.oninput = function(){
+    output.innerHTML = datalist[this.value].label
+    }
+</script>
+</div>
+
+
+
+    <div class="text-center">
+        <a href="#" class="hover-border">Who Is Your Favourite Member Of The Avengers?</a>
+    </div>
+    <div class="let">
+        Enter the Avenger here:
+        <input id="input" value="">
+        <button class="active" onclick="return myfun()">Submit</button>
+        <b>The result is:</b>
+        <span id="result"></span> 
+    </div> 
+
+    <div class="t-text">
+    <h2 class="game-header">Play The Game!</h2>
+    <p class="game-para1">Press the button below to play the game.</p>
+    <p class="game-para2">Was your favourite avenger chosen?</p>
+    </div>
+
+    <span id="img"></span>
+    <div class="container">
+        <div class="chara-wrapper">
+    <script>
+    function randomImg() {
+        var quotes = [
+          {
+            text: "First-movie: Spider-Man(2002), Status: Friend, Actor: Tobey Maguire",
+            img:  "av-1.png"     
+          //https://cdn.mos.cms.futurecdn.net/s9X9HiunfRhSb4kQo4ecbY.jpg 
+            
+          },
+          {
+            text: "First-movie: Iron Man(2008), Status: Friend, Actor: Robert Downey Jr.",
+            img:  "av2.jpg",
+         //https://terrigen-cdn-dev.marvel.com/content/prod/1x/002irm_ons_mas_mob_01_0.jpg
+          },
+          {
+            text: "First-movie: Doctor Strange(2016), Status: Friend, Actor: Benedict Cumberbatch",
+            img:  "av-3.png",
+        //https://cdn.mos.cms.futurecdn.net/oYSFYttTLCLpJQVTJs5ffU.jpg
+          },
+          {
+            img:  "av.png",
+            text: "First-movie: Thor(2011) , Status: Friend/Nemsis, Actor: Tom Hiddleston",
+        //https://i2.wp.com/hipertextual.com/wp-content/uploads/2021/07/loki-1-scaled.jpg
+          },
+          
+        ];
+        var quote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").innerHTML = 
+       '<p>' + quote.text + '</p>' + 
+       '<img src="' + quote.img + '">';
+       document.getElementById("quote").style.color="#fff";
+       document.getElementById("quote").style.whiteSpace="pre";
+       
+        }
+        document.getElementById("img").style.justifyContent="center";
+        document.getElementById("img").style.display="flex";
+      </script>
+      <div id="quote"></div>
+
+
+      <input class="Randombutton" style="float: left;" type="button"
+      value = "Submit" onclick = "randomImg()">
+      </div>
+    </div>
+<div class="img-change">
+    <img src="change-1.jpg" onmouseover="this.src='change-2.jpg'" onmouseout="this.src='change-1.jpg'">
+</div>      <!---https://i.pinimg.com/564x/68/38/e7/6838e70e653c44f657a1499baad0e799.jpg--->
+<!-----https://i.pinimg.com/564x/50/76/1f/50761f740a061dd77cba21072210fea2.jpg---->
+<script src="marvel.js"></script>
+
+
+      
+      <footer>
+        <div class="footer-container">
+            <div class="marvel-box">
+                <div class="lets-make-a-logo">
+                    <img src='marvel.png'>       <!---https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png---->
+                </div>
+            </div>   
+            <ul class="footer-social">
+                <li><a href="https://twitter.com/marvelstudios"><i class = "fab fa-twitter"><img src="twitter.png" height="30" width="30"></i></a></li>
+                <li><a href="https://www.facebook.com/marvelstudios/"><i class="fab fa-facebook-f"><img src="facebook.png" height="30" width="30"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCvC4D8onUfXzvjTOM-dBfEA"><i class="fab fa-youtube£"><img src="youtube.png"height="30" width="30"></i></a></li>
+                <li><a href="https://www.instagram.com/marvel/"><i class="fab fa-instagram"> <img src="instagram.png" height="30" width="30"></i></a></li>
+            </ul>
+            <div class="footer-contact">
+                <h3>Get In Touch</h3
+                class="info">
+                <p>Cork, Ireland</p>
+                <p>353-896784555</p>
+                <p><a href="mailto:Justine.leo@mtu.ie">Justine.leo@mtu.ie</a></p>
+            </div>
+            <div class="copyright">
+                <p>&copy;All Rights Reserved By Marvel Studios 2021 </p>
+            </div> 
+            
+                
+        </div>
+    </footer>
+                
+                
+</body>
+</html>
